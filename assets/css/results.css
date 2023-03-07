@@ -1,0 +1,251 @@
+/** ============================================================
+	* Educare results style dev by FixBD
+	* URL: https://github.com/FixBD/Educare/blob/FixBD/assets/css/results.css
+	* @since v1.0.0
+	* @Version: v1.2.0
+	* @last-update v1.2.0
+	* License - GPL 2.0
+	# Unlimited modify allowed!!!
+============================================================ **/
+
+/* Global style */
+.educare_results {
+	max-width: 960px;
+	margin: 28px auto;
+	font-family: Verdana,Arial,sans-serif;
+}
+.educare_results h1,
+.educare_results h2,
+.educare_results h3,
+.error_notice {
+	text-align: center;
+}
+.educare_results input,
+.educare_results select,
+.educare_results input[type="number"] {
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 100%;
+	min-width: 100%;
+	margin: 6px 0px;
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+.educare_results input[type="number"] {
+	margin: 6px 0 12px;
+}
+.educare_results .select {
+	display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-flow: wrap;
+}
+.educare_results .select * {
+  flex: 2 100px;
+}
+.educare_results .select p  {
+	margin: 8px 0;
+}
+
+.educare_results button {
+  /* color: rgba(255, 255, 255, 0.8);
+  background-color: #11b570;
+  text-align: center;
+  padding: 16px 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;   */
+	margin: 18px auto;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+.educare_results button:hover {
+	-webkit-box-shadow: box-shadow: 3px 3px 12px 4px rgba(0,0,0,.3), inset 0 0 0 transparent;
+  box-shadow: 3px 3px 12px 3px rgba(0,0,0,.3), inset 0 0 0 transparent;
+}
+
+/* Results Passed or failed Style */
+.educare_results .failed,
+.educare_results .success {
+	background: none;
+	padding: 6px;
+}
+.educare_results .failed,
+.error_notice b {
+	background: none;
+	color: red;
+}
+
+
+.educare_results .success {
+	color: green;
+}
+/* Results not found */
+.educare_results .error,
+.notice-error {
+	color: rgba(255, 0, 0, 1.0);
+	margin: 4%;
+}
+
+/* Results body & search forms Style */
+.educare_results .results_form,
+.educare_results .result_body,
+.notice-error {
+	padding: 3% 4%;
+	margin: 0 auto;
+	font-size: 16px;
+	max-width: 1280px;
+	border-radius: 12px;
+}
+.educare_results .results_form {
+	background: rgba(255, 255, 255, 0.200);
+	max-width: 580px;
+	box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.200);
+}
+.results_form.error_notice,
+.notice-error {
+	background: #ff000010;
+	margin: 18px auto;
+	box-shadow: none;
+}
+.results_form.error_notice.success {
+	background: #15ff0010;
+}
+.educare_results .table_body {
+	overflow-x: auto;
+	margin-bottom: 8px;
+}
+.result_body h2,
+.result_body h3 {
+	color: white;
+	background: rgba(0, 156, 0, 0.733);
+	padding: 22px;
+	margin: 0;
+}
+.result_body h2.students_name {
+	color: inherit;
+	background: none;
+}
+.result_body .student_photos {
+	text-align: center;
+}
+.result_body .student_photos img {
+	width: 40%;
+	height: 40%;
+	max-width: 200px;
+	max-height: 200px;
+	padding: 8px;
+	margin: auto;
+	border-radius: 100%;
+}
+.result_body table {
+	background: #eee;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+.result_body .result_details td,
+.result_body .grade_sheet td,
+.result_body .grade_sheet th {
+	text-align: center;
+	padding: 8px;
+	border: 1px solid rgba(20,20,20,0.10);
+}
+.result_body .result_details td {
+	text-align: left;
+}
+.result_body .grade_sheet th:first-child {
+	padding: 0px;
+	min-width: 100%;
+	max-width: 28px;
+}
+.result_body .grade_sheet td:nth-child(2),
+.result_body .grade_sheet th:nth-child(2) {
+	text-align: left;
+	padding-left: 3%;
+}
+.result_body .grade_sheet th {
+	background: rgba(0,115,0,0.20);
+}
+
+#educare-loading {
+	display: none;
+}
+.educare-spinner {
+	position: fixed;
+	height: 70px;
+	width: 70px;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+	background-image: url(../img/loader.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: #11b571b6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+}
+
+
+
+/* Print Style */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+	.no_print {
+	  display: none;
+	}
+	body {
+		width: 960px;
+		padding: 28px
+	}
+	.educare_results,
+	.result_body,
+	.results_form,
+	.result_body .student_photos img {
+		margin: 0 auto;
+		width: 50%;
+		height: 10%;
+		max-width: 100px;
+		max-height: 100px;
+	}
+	table, th, td {
+		border: 1px solid #ddd;
+	}
+	table {
+    border-collapse: collapse;
+  }
+  .result_body, .result_body * {
+    visibility: visible;
+  }
+  .result_body {
+		width: 100%;
+    position: absolute;
+    top: 0;
+		left: 0;
+  }
+	.result_body h3 {
+		color: white !important;
+		background-color: #1db100 !important;
+		-webkit-print-color-adjust: exact; 
+	}
+	.result_body th {
+		background-color: rgba(0,115,0,0.20) !important;
+		-webkit-print-color-adjust: exact; 
+	}
+}
+
+.left-text {
+	text-align: left;
+}
+
